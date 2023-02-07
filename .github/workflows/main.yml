@@ -17,4 +17,4 @@ jobs:
         server: ftp.stageservices.xyz
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        destination-path: /maingitactions
+        server-dir	: /public_html/maingitactions/
