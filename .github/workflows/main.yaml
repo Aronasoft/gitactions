@@ -1,18 +1,15 @@
+name: Deploy website on push
+
 on:
   push:
     branches:
-      -main
-name: Deploy website on push
+      -'main'
+
 jobs:
-  web-deploy:
-    name: Aronasoft
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Get latest code
-      uses: actions/checkout@v3
-    
     - name: Sync files
-      uses: Aronasoft/gitactions
       with:
         server: ftp.stageservices.xyz
         username: ${{ secrets.ftp_username }}
